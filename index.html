@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>3D Bear</title>
+  </head>
+  <body>
+    <h1 class="project-title">
+      <p class="title__tagline"><span class="tagline__we">we</span><span class="tagline__bare">bare</span></p>
+      <span class="tagline__bears">bears</span>
+    </h1>
+    <div class="canvas">
+      <div class="face">
+        <div class="face__view face__view--front">
+          <div class="face__view--front__eyes">
+            <span class="front__eyes__pupil"></span>
+            <span class="front__eyes__pupil"></span>
+          </div>
+          <div class="face__view--front__nose"></div>
+          <div class="face__view--front__mouth">
+            <div class="mouth__teeth"></div>
+            <div class="mouth__tongue"></div>
+          </div>
+        </div>
+
+        <div class="face__view face__view--left">
+          <div class="face__view--front__eyes">
+            <span class="front__eyes__pupil"></span>
+            <span class="front__eyes__pupil"></span>
+          </div>
+          <div class="face__view--front__nose"></div>
+          <div class="face__view--front__mouth">
+            <div class="mouth__teeth"></div>
+            <div class="mouth__tongue"></div>
+          </div>
+        </div>
+
+        <div class="face__view face__view--right">
+          <div class="face__view--front__eyes">
+            <span class="front__eyes__pupil"></span>
+            <span class="front__eyes__pupil"></span>
+          </div>
+          <div class="face__view--front__nose"></div>
+          <div class="face__view--front__mouth face__view--front__mouth--frost">
+            <!-- <div class="mouth__teeth"></div>
+            <div class="mouth__tongue"></div> -->
+          </div>
+        </div>
+        <div class="face__view face__view--back">
+          <div class="face__view--front__eyes">
+            <span class="front__eyes__pupil font__eyes__pupil--panda"></span>
+            <span class="front__eyes__pupil font__eyes__pupil--panda"></span>
+          </div>
+          <div class="face__view--front__nose"></div>
+          <div class="face__view--front__mouth">
+            <div class="mouth__teeth"></div>
+            <div class="mouth__tongue"></div>
+          </div>
+        </div>
+        <div class="face__view face__view--top">
+          <div class="top__ear-container top__ear-container--white__left">
+            <div
+              class="ear-container__ear ear-container__ear--front ear-front--white"
+            >
+              <div class="ear--front__inside"></div>
+            </div>
+            <div
+              class="ear-container__ear ear-container__ear--left ear--white"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--right ear--white"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--back ear--white"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--top ear--white"
+            ></div>
+          </div>
+
+          <div class="top__ear-container top__ear-container--white__right">
+            <div
+              class="ear-container__ear ear-container__ear--front ear-front--white"
+            >
+              <div class="ear--front__inside"></div>
+            </div>
+            <div
+              class="ear-container__ear ear-container__ear--left ear--white"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--right ear--white"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--back ear--white"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--top ear--white"
+            ></div>
+          </div>
+
+          <div class="top__ear-container top__ear-container--white-back__left">
+            <div
+              class="ear-container__ear ear-container__ear--front ear--black"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--left ear--black"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--right ear--black"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--back ear-front--black"
+            >
+              <div class="ear--front__inside"></div>
+            </div>
+            <div
+              class="ear-container__ear ear-container__ear--top ear--black"
+            ></div>
+          </div>
+
+          <div class="top__ear-container top__ear-container--white-back__right">
+            <div
+              class="ear-container__ear ear-container__ear--front ear--black"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--left ear--black"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--right ear--black"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--back ear-front--black"
+            >
+              <div class="ear--front__inside"></div>
+            </div>
+            <div
+              class="ear-container__ear ear-container__ear--top ear--black"
+            ></div>
+          </div>
+
+          <div class="top__ear-container top__ear-container--brown-left__left">
+            <div
+              class="ear-container__ear ear-container__ear--front ear--brown"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--left ear-front--brown"
+            >
+              <div class="ear--front__inside"></div>
+            </div>
+            <div
+              class="ear-container__ear ear-container__ear--right ear--brown"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--back ear--brown"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--top ear--brown"
+            ></div>
+          </div>
+
+          <div class="top__ear-container top__ear-container--brown-left__right">
+            <div
+              class="ear-container__ear ear-container__ear--front ear--brown"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--left ear-front--brown"
+            >
+              <div class="ear--front__inside"></div>
+            </div>
+            <div
+              class="ear-container__ear ear-container__ear--right ear--brown"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--back ear--brown"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--top ear--brown"
+            ></div>
+          </div>
+
+          <div class="top__ear-container top__ear-container--black-right__left">
+            <div
+              class="ear-container__ear ear-container__ear--front ear--white"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--left ear--white"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--right ear-front--white"
+            >
+              <div class="ear--front__inside"></div>
+            </div>
+            <div
+              class="ear-container__ear ear-container__ear--back ear--white"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--top ear--white"
+            ></div>
+          </div>
+
+          <div
+            class="top__ear-container top__ear-container--black-right__right"
+          >
+            <div
+              class="ear-container__ear ear-container__ear--front ear--white"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--left ear--white"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--right ear-front--white"
+            >
+              <div class="ear--front__inside"></div>
+            </div>
+            <div
+              class="ear-container__ear ear-container__ear--back ear--white"
+            ></div>
+            <div
+              class="ear-container__ear ear-container__ear--top ear--white"
+            ></div>
+          </div>
+        </div>
+
+        <div class="face__view face__view--bottom"></div>
+      </div>
+
+      <div class="floors">
+        <div class="floors__category floors__category--white">
+          <h2 class="bear-name bear-name--ice">ice bear</h2>
+        </div>
+        <div class="floors__category floors__category--brown">
+          <h2 class="bear-name bear-name--grizzly">grizzly</h2>
+        </div>
+        <div class="floors__category floors__category--back-white">
+          <h2 class="bear-name bear-name--panda">panda</h2>
+        </div>
+        <div class="floors__category floors__category--black">
+          <h2 class="bear-name bear-name--frost">frost (me)</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Calistoga&display=swap");
+
+:root {
+  --outline-color: black;
+
+  --main-bg: linear-gradient(
+    150deg,
+    rgba(175, 172, 172, 1) 0%,
+    rgba(237, 237, 237, 1) 33%,
+    rgba(19, 19, 19, 1) 33%,
+    rgba(117, 42, 10, 1) 33%,
+    rgba(73, 26, 6, 1) 66%,
+    rgba(34, 34, 34, 1) 66%,
+    rgba(33, 33, 33, 1) 100%,
+    rgba(50, 50, 50, 1) 100%
+  );
+
+  --eye-color: hsl(0, 0%, 5%);
+  --nose-color: hsl(345, 6%, 13%);
+  --mouth-color: hsl(0, 62%, 31%);
+  --teeth-color: hsl(0, 0%, 100%);
+  --tounge-color: hsl(0, 84%, 63%);
+  --ear-panda-color: hsl(345, 6%, 13%);
+  --ear-inside-color: hsl(0, 84%, 63%);
+
+  --face-bg: hsl(0, 0%, 100%);
+  --face-brown-bg: hsl(10, 48%, 40%);
+
+  --name-ice-bear-color: hsl(56, 35%, 90%);
+  --name-ice-shadow-color: hsl(129, 22%, 81%);
+  --name-text-stroke-color: hsl(32, 18%, 39%);
+
+  --name-grizzly-bear-color: hsl(9, 67%, 56%);
+
+  --name-panda-bear-color: hsl(32, 24%, 22%);
+
+  --main-font: "Calistoga", serif;
+}
+
+*,
+*::before,
+*::after,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--main-font);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: rgb(175, 172, 172);
+  background: var(--main-bg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  gap: 5rem;
+}
+
+.project-title {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align:center;
+}
+
+.title__tagline {
+  font-size:3rem;
+  display:flex;
+  gap:1.2rem;
+}
+
+.tagline__we {
+  display:inline-block;
+  color:var(--name-panda-bear-color);
+  letter-spacing:0.2rem;
+  position:relative;
+}
+
+.tagline__we::before {
+  content:"";
+  height:0.7rem;
+  width:50%;
+  transform:rotate(-3deg);
+  border-radius:80% 20% 80% 20%;
+  background-color:var(--name-panda-bear-color);
+  position:absolute;
+  bottom:-0.2rem;
+  right:0;
+}
+
+.tagline__bare {
+  color:var(--name-grizzly-bear-color);
+  letter-spacing:0.2rem;
+  -webkit-text-stroke: 0.031rem var(--name-text-stroke-color);
+}
+
+.tagline__bears {
+  color:var(--name-ice-bear-color);
+  -webkit-text-stroke: 0.031rem var(--name-text-stroke-color);
+  text-shadow: -0.1rem 0px 0px var(--name-ice-shadow-color),
+    -0.2rem 0px 0px var(--name-ice-shadow-color),
+    -0.3rem 0px 0px var(--name-ice-bear-color),
+    -0.4rem 0px 0px var(--name-ice-bear-color),    
+    -0.5rem 0px 0px var(--name-ice-bear-color);
+  letter-spacing: 0.4rem;
+}
+
+.canvas {
+  /* transform:rotateX(70deg); */
+  transform-style: preserve-3d;
+  animation: rotation 20s ease-in-out infinite;
+}
+
+/* .canvas:hover {
+  transform:rotateY(360deg) rotateX(-20deg);
+} */
+
+.face {
+  height: 18.75rem;
+  width: 18.75rem;
+  transform-style: preserve-3d;
+  position: relative;
+  transition: all 3s ease;
+}
+
+.face__view {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 0.313rem;
+  border: 2px solid var(--outline-color);
+  transform-style: preserve-3d;
+  backface-visibility: visible;
+  background-color: gray;
+  position: absolute;
+}
+
+.face__view--front {
+  background-color: var(--face-bg);
+}
+
+.face__view--front__eyes {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.front__eyes__pupil {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: var(--eye-color);
+  border-radius: 50%;
+}
+
+.font__eyes__pupil--panda {
+  box-shadow: 0px 0px 0px 2rem rgb(53, 53, 53);
+}
+
+.face__view--front__nose {
+  height: 2rem;
+  width: 3.8rem;
+  margin: 0 auto;
+  border: 2px solid var(--outline-color);
+  border-radius: 50%;
+  background-color: var(--nose-color);
+}
+
+.face__view--front__mouth {
+  height: 4rem;
+  width: 12rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid var(--outline-color);
+  border-radius: 3.125rem 3.125rem 5.625rem 5.625rem;
+  background-color: var(--mouth-color);
+}
+
+.face__view--front__mouth--frost {
+  height:1rem;
+  border-radius:10rem;
+  background-color:var(--eye-color);
+}
+
+.mouth__teeth {
+  height: 1rem;
+  width: 2rem;
+  border: 2px solid var(--outline-color);
+  border-radius: 0rem 0rem 5rem 5rem;
+  background-color: var(--teeth-color);
+  position: relative;
+}
+
+.mouth__teeth::before,
+.mouth__teeth::after {
+  content: "";
+  height: inherit;
+  width: inherit;
+  border: inherit;
+  border-radius: inherit;
+  background-color: inherit;
+  position: absolute;
+  top: -0.2rem;
+}
+
+.mouth__teeth::before {
+  right: 2rem;
+}
+
+.mouth__teeth::after {
+  left: 2rem;
+}
+
+.mouth__tongue {
+  height: 1.5rem;
+  width: 8rem;
+  border: 2px solid var(--outline-color);
+  border-bottom: none;
+  border-radius: 5.625rem 5.625rem 1.875rem 1.875rem;
+  background-color: var(--tounge-color);
+}
+
+.face__view--left {
+  background-color: var(--face-brown-bg);
+  transform: rotateY(-90deg) translateZ(9.3rem) translateX(-9.5rem);
+}
+
+.face__view--right {
+  background-color: var(--face-bg);
+  transform: rotateY(90deg) translateZ(9.3rem) translateX(9.5rem);
+}
+
+.face__view--back {
+  background-color: var(--face-bg);
+  transform: translateZ(-19rem);
+}
+
+.face__view--top {
+  height: 102%;
+  background-color: white;
+  transform: rotateX(90deg) translateZ(9.3rem) translateY(-9.5rem);
+  position: relative;
+}
+
+.face__view--bottom {
+  background: var(--main-bg);
+  transform: rotateX(90deg) translateZ(4.9rem) translateY(-9.5rem);
+}
+
+.top__ear-container {
+  height: 50px;
+  width: 50px;
+  transform-style: preserve-3d;
+  background-color: gray;
+  position: absolute;
+}
+
+.top__ear-container--white__left {
+  left: 22%;
+  bottom: 0;
+}
+
+.top__ear-container--white__right {
+  right: 22%;
+  bottom: 0;
+}
+
+.top__ear-container--white-back__left {
+  left: 22%;
+  top: 4%;
+}
+
+.top__ear-container--white-back__right {
+  right: 22%;
+  top: 4%;
+}
+
+.top__ear-container--brown-left__left {
+  left: 0%;
+  top: 22%;
+}
+
+.top__ear-container--brown-left__right {
+  left: 0%;
+  bottom: 22%;
+}
+
+.top__ear-container--black-right__left {
+  right: 0%;
+  top: 22%;
+}
+
+.top__ear-container--black-right__right {
+  right: 0%;
+  bottom: 22%;
+}
+
+.ear-container__ear {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  border-radius: 5px;
+  border: 2px solid var(--outline-color);
+}
+
+.ear-container__ear--front {
+  transform: rotateX(90deg) translateZ(-0.8rem) translateY(2rem);
+  /* background-color:gray; */
+}
+
+.ear--front__inside {
+  height: 2rem;
+  width: 2rem;
+  border: 2px solid var(--outline-color);
+  border-radius: 0rem 0rem 50rem 50rem;
+  background-color: var(--ear-inside-color);
+}
+
+.ear-front--white {
+  background-color: white;
+}
+
+.ear--white {
+  background-color: white;
+}
+
+.ear-front--brown {
+  background-color: var(--face-brown-bg);
+}
+
+.ear--brown {
+  background-color: var(--face-brown-bg);
+}
+
+.ear-front--black {
+  background-color: var(--ear-panda-color);
+}
+
+.ear--black {
+  background-color: var(--ear-panda-color);
+}
+
+.ear-container__ear--left {
+  transform: rotateX(90deg) rotateY(90deg) translateZ(-1.6rem) translateY(2rem)
+    translateX(-4.7rem);
+  /* background-color:gray; */
+}
+
+.ear-container__ear--right {
+  transform: rotateX(90deg) rotateY(90deg) translateZ(1.5rem) translateY(2rem)
+    translateX(-8.8rem);
+  /* background-color:gray; */
+}
+
+.ear-container__ear--back {
+  transform: rotateX(90deg) translateZ(14.4rem) translateY(2rem);
+  /* background-color:gray; */
+}
+
+.ear-container__ear--top {
+  height: 100%;
+  /* background-color:gray; */
+  transform: translateY(-16.4rem) translateX(0rem) translateZ(4rem);
+}
+
+.floors {
+  height: 5rem;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.floors__category {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  border-radius: 0px 0px 5px 5px;
+  border: 2px solid var(--outline-color);
+  position: absolute;
+}
+
+.floors__category--white {
+  background-color: var(--face-brown-bg);
+}
+
+.floors__category--brown {
+  transform: rotateY(-90deg) translateZ(9.3rem) translateX(-9.4rem);
+  background-color: rgba(19, 19, 19, 1);
+}
+
+.floors__category--back-white {
+  transform: translateZ(-19rem) rotateY(180deg);
+  background-color: var(--face-brown-bg);
+}
+
+.floors__category--black {
+  transform: rotateY(90deg) translateZ(9.3rem) translateX(9.4rem);
+  background-color: rgba(19, 19, 19, 1);
+}
+
+.bear-name {
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.bear-name--ice {
+  color: var(--name-ice-bear-color);
+  -webkit-text-stroke: 0.031rem var(--name-text-stroke-color);
+  text-shadow: -0.1rem 0px 0px var(--name-ice-shadow-color),
+    -0.2rem 0px 0px var(--name-ice-shadow-color),
+    -0.3rem 0px 0px var(--name-ice-bear-color),
+    -0.4rem 0px 0px var(--name-ice-bear-color);
+  letter-spacing: 0.4rem;
+}
+
+.bear-name--frost {
+  color: var(--name-ice-bear-color);
+  font-size:2.4rem;
+  -webkit-text-stroke: 0.031rem var(--name-text-stroke-color);
+  text-shadow: -0.1rem 0px 0px var(--name-ice-shadow-color),
+    -0.2rem 0px 0px var(--name-ice-shadow-color),
+    -0.3rem 0px 0px var(--name-ice-bear-color),
+    -0.4rem 0px 0px var(--name-ice-bear-color);
+  letter-spacing: 0.4rem;
+}
+
+.bear-name--grizzly {
+  color: var(--name-grizzly-bear-color);
+  -webkit-text-stroke: 0.031rem var(--name-text-stroke-color);
+  letter-spacing: 0.4rem;
+}
+
+.bear-name--panda {
+  color: var(--name-panda-bear-color);
+  letter-spacing: 0.4rem;
+  position: relative;
+}
+
+.bear-name--panda::before {
+  content: "";
+  height: 0.4rem;
+  width: 50%;
+  border-radius: 50%;
+  background-color: var(--name-panda-bear-color);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes rotation {
+  0% {
+    transform:rotateX(0deg) rotateY(0deg);
+  }
+  20% {
+    transform:rotateX(-10deg) rotateY(-75deg);
+  }
+  40% {
+    transform:rotateX(0deg) rotateY(-150deg);
+  }
+  60% {
+    transform:rotateX(-10deg) rotateY(-225deg);
+  }
+  80% {
+    transform:rotateX(0deg) rotateY(-300deg);
+  }
+  100% {
+    transform:rotateX(-10deg rotateY(-360deg));
+  }
+}
